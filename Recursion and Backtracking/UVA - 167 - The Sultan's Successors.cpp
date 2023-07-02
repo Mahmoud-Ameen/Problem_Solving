@@ -1,6 +1,8 @@
-//
-// Created by mahmoud on 6/30/2023.
-//
+
+/*
+ * problem link: https://vjudge.net/problem/UVA-167
+ * */
+
 #include <bits/stdc++.h>
 
 using namespace std;

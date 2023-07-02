@@ -15,3 +15,5 @@ add_executable(10946
         "Recursion and Backtracking/UVA - 10946 - You want what filled.cpp")
 add_executable(10344
         "Recursion and Backtracking/UVA - 10344 - 23 out of 5.cpp")
+add_executable(524
+        "Recursion and Backtracking/UVA - 524 - Prime Ring.cpp")
