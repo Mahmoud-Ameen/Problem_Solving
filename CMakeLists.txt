@@ -17,3 +17,5 @@ add_executable(10344
         "Recursion and Backtracking/UVA - 10344 - 23 out of 5.cpp")
 add_executable(524
         "Recursion and Backtracking/UVA - 524 - Prime Ring.cpp")
+add_executable(750
+        "Recursion and Backtracking/UVA - 750 - 8 Queens Chess Problem.cpp")
