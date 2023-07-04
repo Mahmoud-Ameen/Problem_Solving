@@ -6,9 +6,9 @@
 
 using namespace std;
 
-long long mx = INT_MIN;
+int mx = INT_MIN;
 
-void backtrack(long long num,long long cycleLength){
+void findCycleLength(int num, int cycleLength){
     bool isEven = num % 2 == 0;
     if(num == 1){
         mx = max(mx,cycleLength + 1);
@@ -16,18 +16,18 @@ void backtrack(long long num,long long cycleLength){
     }
 
     if(isEven)
-        backtrack(num / 2, cycleLength + 1);
+        findCycleLength(num / 2, cycleLength + 1);
     else
-        backtrack(num*3+1, cycleLength + 1);
+        findCycleLength(num * 3 + 1, cycleLength + 1);
 
 }
 
 void solve(int start,int end){
     for (int i = start; i <= end; ++i) {
-        backtrack(i,0);
+        findCycleLength(i, 0);
     }
     for (int i = end; i <= start; ++i) {
-        backtrack(i,0);
+        findCycleLength(i, 0);
     }
 }
 

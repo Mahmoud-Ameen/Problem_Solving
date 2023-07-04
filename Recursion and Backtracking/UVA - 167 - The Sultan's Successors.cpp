@@ -53,7 +53,7 @@ void mutateBoard(int row,int col,bool queenAdded){
 }
 
 // queen number from 0 to 7
-void backtrack(int queenNumber,int sum){
+void placeQueen(int queenNumber, int sum){
 
     if(queenNumber == 8) {
         mx = max(mx,sum);
@@ -64,7 +64,7 @@ void backtrack(int queenNumber,int sum){
         if(!attacked[queenNumber][col]){
             // decided to put a queen on this square
             mutateBoard(queenNumber,col,true);
-            backtrack(queenNumber+1,sum + values[queenNumber][col]);
+            placeQueen(queenNumber + 1, sum + values[queenNumber][col]);
 
             // decided not to put a queen on this square
             mutateBoard(queenNumber,col,false);
@@ -73,7 +73,7 @@ void backtrack(int queenNumber,int sum){
 
 }
 
-void solve(){ backtrack(0,0); }
+void solve(){ placeQueen(0, 0); }
 
 int main(){
     int k;
