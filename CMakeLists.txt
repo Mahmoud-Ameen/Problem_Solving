@@ -19,3 +19,5 @@ add_executable(524
         "Recursion and Backtracking/UVA - 524 - Prime Ring.cpp")
 add_executable(750
         "Recursion and Backtracking/UVA - 750 - 8 Queens Chess Problem.cpp")
+add_executable(816B
+        "Prefix Sum and Two pointers/Codeforces 816B Karen and Coffee.cpp")
