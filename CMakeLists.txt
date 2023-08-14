@@ -25,6 +25,8 @@ add_executable(LC17
         "Recursion and Backtracking/LeetCode - 17 - Letter Combinations of a Phone Number.cpp")
 add_executable(LC46
         "Recursion and Backtracking/LeetCode - 46 - Permutations.cpp")
+add_executable(LC216
+        "Recursion and Backtracking/LeetCode - 216 - Combination Sum III.cpp")
 
 add_executable(251A "Prefix Sum and Two pointers/Codeforces 251A Points on Line .cpp")
 add_executable(433B "Prefix Sum and Two pointers/Codeforces 433B Kuriyama Mirai's Stones.cpp")
