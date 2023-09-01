@@ -1,5 +1,6 @@
 /*
  * Problem Link: https://www.codingninjas.com/studio/problems/ninja-s-training_3621003
+ * Same idea as TopCoder RGB street
  * */
 
 #include <bits/stdc++.h>
