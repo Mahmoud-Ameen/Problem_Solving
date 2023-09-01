@@ -1,5 +1,6 @@
 /*
  * Problem Link: https://www.codingninjas.com/studio/problems/frog-jump_3621012/
+ * Note that this problem is the same as LeetCode 198 House Robber
  * */
 
 #include <bits/stdc++.h>
