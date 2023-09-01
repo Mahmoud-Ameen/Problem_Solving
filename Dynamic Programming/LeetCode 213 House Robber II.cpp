@@ -15,7 +15,7 @@ public:
         vector<int> choice1Vec,choice2Vec;
 
         choice1Vec.push_back(nums[0]);
-        for (int i = 0; i < n-1; ++i) {
+        for (int i = 1; i < n-1; ++i) {
             choice1Vec.push_back(nums[i]);
             choice2Vec.push_back(nums[i]);
         }
@@ -48,9 +48,3 @@ private:
     }
 
 };
-
-int main(){
-    Solution s;
-    vector<int> vec{1, 3, 2, 1};
-    cout << s.rob(vec);
-}
