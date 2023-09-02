@@ -16,7 +16,10 @@ public:
          * Note that on each row to calculate find path to bottom
          * we only need to know minimum path lengths from the next
          * row to the end.
-         * So no need to use a 2D dp matrix.
+         * Furthermore, When processing cells in a row we don't need the values
+         * of indexes before this cell in the next row.
+         *
+         * So we can use a 1D dp array.
          * */
         vector<int> dp(rows+1);
 
@@ -32,15 +35,3 @@ public:
         return dp[0];
     }
 };
-
-int main(){
-    Solution s;
-    vector<vector<int>> v{
-            {2},
-            {3,4},
-            {6,5,7},
-            {4,1,8,3}
-    };
-
-    cout << s.minimumTotal(v);
-}
