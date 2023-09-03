@@ -121,20 +121,29 @@ private:
     int memo[51][51][51];
     int solveRecursive(int& n, int r1, int c1, int c2, vector<vector<int>>& grid){
         int r2 = r1 + c1 - c2;
+
+        // Terminal case: Out of Bound/ Cell with Throne
+        // Return large negative value to indicate no that no path exists from here
         if(c1 == n || c2 == n || r1 == n || r2 == n || grid[r1][c1] == -1 || grid[r2][c2] == -1) return -1e8;
 
+        // Previously computed value
         if(memo[r1][c1][c2] != -1) return memo[r1][c1][c2];
 
+        // Reached the destination.
+        // Note that if one path reached the destination,
+        // the second one either reached the destination too or went out of bound.
+        // Since out of bound case is already handled. This case indicates that both paths were completed
         if(r1 == n-1 && c1 == n-1) return memo[r1][c1][c2] = grid[r1][c1];
 
-        int p1 = solveRecursive(n,r1+1,c1,c2,grid);
-        int p2 = solveRecursive(n,r1+1,c1,c2+1,grid);
-        int p3 = solveRecursive(n,r1,c1+1,c2,grid);
-        int p4 = solveRecursive(n,r1,c1+1,c2+1,grid);
+        // Find values for possible moves.
+        int p1 = solveRecursive(n,r1+1,c1,c2,grid); // Down, Down
+        int p2 = solveRecursive(n,r1+1,c1,c2+1,grid); // Down, Right
+        int p3 = solveRecursive(n,r1,c1+1,c2,grid); // Right, Down
+        int p4 = solveRecursive(n,r1,c1+1,c2+1,grid); // Right, Right
 
-        int maxPath = max({p1,p2,p3,p4});
+        int maxPath = max({p1,p2,p3,p4}); // Find Path with max value
 
-        // Add cherries
+        // Add cherries in current cell(s)
         if(c1 == c2)
             maxPath += grid[r2][c2];
         else
