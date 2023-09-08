@@ -1,3 +1,7 @@
+/*
+ * Problem link: https://leetcode.com/problems/delete-operation-for-two-strings
+ * */
+
 #include <bits/stdc++.h>
 using namespace std;
 
