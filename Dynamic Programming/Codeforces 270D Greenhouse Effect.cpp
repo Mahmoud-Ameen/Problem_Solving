@@ -1,5 +1,5 @@
 /*
- * Problem link: https://codeforces.com/contest/699/problem/C.
+ * Problem link: https://codeforces.com/contest/270/problem/D.
  * Rate: 1700?
  * */
 
