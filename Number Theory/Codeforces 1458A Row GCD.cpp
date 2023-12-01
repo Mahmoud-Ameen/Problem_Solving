@@ -35,8 +35,10 @@ int main(){
      * let gcd(a2-a1,a3-a1, ..., an-a1) = gcdA
      * note that gcdA is a constant value that can be precomputed once and for all
      * */
+
     ll minElement = *min_element(all(a));
     ll gcdA = 0;
+
     for (int i = 1; i < n; ++i)
         gcdA = gcd(gcdA, a[i] - minElement);
 
