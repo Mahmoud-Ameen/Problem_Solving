@@ -95,12 +95,10 @@ void Ma7moud() {
     else
         cout << -1 <<endl;
 }
-// 1000021
 
 signed main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
     cout.tie(nullptr);
-//    while(true)
     Ma7moud();
 }
